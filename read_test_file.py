@@ -50,6 +50,7 @@ for books in session.query(Book).filter(Book.id_publisher == int(publ_id)).all()
 
 print(f"книги автора с id [{int(publ_id)}] продаются в магазинах: {', '.join(shops)}")
 session.commit()
+session.close()
 
 
 
